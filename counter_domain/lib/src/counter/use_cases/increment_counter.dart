@@ -1,7 +1,7 @@
 import 'package:counter_domain/counter_domain.dart';
 
 class IncrementCounter {
-  IncrementCounter(this._repository);
+  const IncrementCounter(this._repository);
 
   final CounterRepository _repository;
 
