@@ -5,7 +5,7 @@ class ObserveCounter {
 
   final CounterRepository _repository;
 
-  Stream<Number> call() => _repository.asyncMap(
+  Stream<Number> call() => _repository.updates.asyncMap(
         (event) async => await _repository.getNumber(),
       );
 }
