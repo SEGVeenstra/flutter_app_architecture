@@ -13,5 +13,6 @@ class CounterRepositoryMemory extends CounterRepository {
   @override
   Future<void> storeNumber(Number number) async {
     _number = number;
+    emit(CounterRepositoryUpdated());
   }
 }
