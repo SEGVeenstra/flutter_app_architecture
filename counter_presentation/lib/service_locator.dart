@@ -7,8 +7,4 @@ final sl = GetIt.instance;
 void setupServiceLocator() {
   // repositories
   sl.registerSingleton<CounterRepository>(CounterRepositoryMemory());
-
-  // use cases
-  sl.registerSingleton(IncrementCounter(sl.get()));
-  sl.registerSingleton(ObserveCounter(sl.get()));
 }

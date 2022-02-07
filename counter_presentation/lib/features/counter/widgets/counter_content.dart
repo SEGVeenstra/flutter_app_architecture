@@ -1,4 +1,4 @@
-import 'package:counter_presentation/features/counter/cubit/counter_cubit.dart';
+import 'package:counter_domain/counter_domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,11 +13,11 @@ class CounterContent extends StatelessWidget {
         const Text(
           'You have pushed the button this many times:',
         ),
-        BlocBuilder<CounterCubit, CounterState>(
+        BlocBuilder<CounterBloc, CounterState>(
           builder: (context, state) {
             final String numberText;
             if (state is! CounterLoaded) {
-              numberText = '...';
+              numberText = 'Loading...';
             } else {
               numberText = state.number.value.toString();
             }

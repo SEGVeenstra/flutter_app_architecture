@@ -18,5 +18,6 @@ dev_dependencies:
   mockito: ^5.0.17
 
 dependencies: 
+  bloc: ^8.0.2
   copy_with_extension: ^4.0.0
   equatable: ^2.0.3
